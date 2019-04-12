@@ -1,0 +1,2 @@
+# SnackMarquee
+Simple Jquery Marquee

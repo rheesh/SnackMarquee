@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+    <link href="../src/snackmarquee.css" rel="stylesheet" />
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../src/snackmarquee.js"></script>
+
+    <script>
+        let slider;
+        $(document).ready(function () {
+            slider = new SnackMarquee({
+                selector: '.slider',
+                mode: 'right',
+                speed: 100,
+                space: 20,
+                font: 'Arial, Helvetica, sans-serif',
+                size: 24,
+                color: 'white',
+                background: 'black',
+                width: 0,
+                height: 0,
+                children: [
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas tortor et ante varius faucibus id at tellus.',
+                    'Quisque elementum diam nisi, eget sollicitudin ex rutrum at.',
+                    'Suspendisse potenti. Praesent odio nisl, bibendum sit amet ultricies eget, pharetra in metus.',
+                ]
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+    <h1>Snack Marquee Test</h1>
+    <div class="slider" style="width:640px;height:32px"></div>
+    <br/><br/>
+    <button onClick="slider.mode='left'">left</button>
+    <button onClick="slider.mode='right'">right</button>
+    <button onClick="slider.speed=50">speed 50/s</button>
+    <button onClick="slider.speed=100">speed 100/s</button>
+    <button onClick="slider.speed=200">speed 200/s</button>
+    <br/>
+    <button onClick="slider.color='yellow'">yellow color</button>
+    <button onClick="slider.color='white'">white color</button>
+    <button onClick="slider.background='grey'">grey background</button>
+    <button onClick="slider.background='black'">black background</button>
+    <br/>
+    <button onClick="slider.width=320">w320</button>
+    <button onClick="slider.width=640">w640</button>
+    <button onClick="slider.height=32">h32</button>
+    <button onClick="slider.height=48">h48</button>
+    <br/>
+    <button onClick="slider.delete(1)">remove text 2</button>
+    <button onClick="slider.insert(1, 'Quisque elementum diam nisi, eget sollicitudin ex rutrum at.')">insert text 2</button>
+    <button onClick="slider.start()">Start</button>
+    <button onClick="slider.stop()">Stop</button>
+    <br/>
+</body>
+</html>

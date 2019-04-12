@@ -1,0 +1,39 @@
+/**
+ * @overview Simple text marquee css
+ * last modified : 2019.04.12
+ * @author Seungho.Yi <rh22sh@gmail.com>
+ * @package SnackMarquee
+ * @Version 1.0.0
+ * @license MIT
+ * @see https://github.com/rheesh/SnackMarquee
+ */
+
+.notransition {
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+}
+
+.slider-viewport {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+.snackslide {
+    position: absolute;
+    overflow : hidden;
+    display: block;
+    white-space: nowrap;
+    margin: 0px;
+    padding: 0px;
+}
